@@ -33,7 +33,7 @@ export default class EmployeeService {
     return this.datasource.updateEmployeeById(params);
   }
   public deleteEmployeeById(
-    params: unknown,
+    params: GetEmployeeByIdParams,
   ): Promise<EmployeeModel | undefined> {
     return this.datasource.deleteEmployeeById(params);
   }
