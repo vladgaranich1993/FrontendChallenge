@@ -1,17 +1,18 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { CreateEmployeeParams } from "../params/employee.param";
 import EmployeeService from "../services/employee.service";
 
 const service = EmployeeService.getInstance();
 
-export const useDeleteEmployeeById = () => {
+export const useCreateEmployee = () => {
   const queryClient = useQueryClient();
 
   return useMutation({
-    mutationFn: (id: number) => service.deleteEmployeeById({id}),
+    mutationFn: (params: CreateEmployeeParams) => service.createEmployee(params),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["getEmployeeList"] });
     },
   });
 };
 
-export default useDeleteEmployeeById;
+export default useCreateEmployee;

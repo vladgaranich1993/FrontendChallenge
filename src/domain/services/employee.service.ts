@@ -1,7 +1,7 @@
 import EmployeeDatasource from "@/data/datasources/employee.datasource";
 import EmployeeDatasourceContract from "../contracts/employeeDatasource.contract";
-import { EmployeeListModel, EmployeeModel } from "../models/employee.model";
-import { GetEmployeeByIdParams } from "../params/employee.param";
+import { EmployeeListModel, EmployeeModel, UpdatedEmployeeModel } from "../models/employee.model";
+import { CreateEmployeeParams, GetEmployeeByIdParams, UpdateEmployeeParams } from "../params/employee.param";
 
 export default class EmployeeService {
   private static _instance: EmployeeService;
@@ -19,7 +19,7 @@ export default class EmployeeService {
   public getEmployeeList(): Promise<EmployeeListModel | undefined> {
     return this.datasource.getEmployeeList();
   }
-  public createEmployee(params: unknown): Promise<EmployeeModel | undefined> {
+  public createEmployee(params: CreateEmployeeParams): Promise<UpdatedEmployeeModel | undefined> {
     return this.datasource.createEmployee(params);
   }
   public getEmployeeById(
@@ -28,8 +28,8 @@ export default class EmployeeService {
     return this.datasource.getEmployeeById(params);
   }
   public updateEmployeeById(
-    params: unknown,
-  ): Promise<EmployeeModel | undefined> {
+    params: UpdateEmployeeParams,
+  ): Promise<UpdatedEmployeeModel | undefined> {
     return this.datasource.updateEmployeeById(params);
   }
   public deleteEmployeeById(
