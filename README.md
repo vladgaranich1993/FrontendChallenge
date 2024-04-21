@@ -50,3 +50,17 @@ $ npm i
 ### Formatting
 
 Prettier is our formatter of choice. We added some settings for VSCode. If you use a different IDE please adapt the settings.
+
+## Using Mocoon for Mocking API Responses
+
+Due to limitations and slow response times with dummy API server, I've incorporated Mocoon, an open-source application for mocking responses. This tool significantly speeds up both development and testing phases.
+
+### Installation & Configuration
+
+1. Install Mocoon: Visit [Mocoon's official website](insert-website-link-here) and follow the instructions to install the application.
+2. Set Up Configuration:
+   - Find the provided configuration file in the project root.
+   - Click '+' button in Mockoon and select 'Open local environment' and choose the provided configuration file.
+   - Uncomment the line 12 in employee.datasource.ts.
+
+By following these steps, you can simulate API responses and streamline your workflow.
