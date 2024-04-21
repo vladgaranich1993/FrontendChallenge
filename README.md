@@ -57,7 +57,7 @@ Due to limitations and slow response times with dummy API server, I've incorpora
 
 ### Installation & Configuration
 
-1. Install Mocoon: Visit [Mocoon's official website](insert-website-link-here) and follow the instructions to install the application.
+1. Install Mocoon: Visit [Mocoon's official website](https://mockoon.com/) and follow the instructions to install the application.
 2. Set Up Configuration:
    - Find the provided configuration file in the project root.
    - Click '+' button in Mockoon and select 'Open local environment' and choose the provided configuration file.
